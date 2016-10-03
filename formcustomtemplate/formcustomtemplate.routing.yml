@@ -1,0 +1,7 @@
+formcustomtemplate.example_page_callback:
+  path: '/form-with-custom-template'
+  defaults:
+    _controller: '\Drupal\formcustomtemplate\Controller\ExampleController::build'
+    _title: 'example'
+  requirements:
+    _permission: 'access content'

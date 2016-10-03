@@ -1,0 +1,5 @@
+name: Example form with custom template
+type: module
+description: example form with custom template
+core: 8.x
+package: Custom
