@@ -9,7 +9,7 @@
  * Implements hook_theme_suggestions_alter().
  */
 function formcustomtemplate_theme_suggestions_alter(array &$suggestions, array $variables, $hook) {
-
+/*
   if ($hook == 'form' & !empty($variables['element']['#theme'])) {
     $suggestions[] = 'form__' . $variables['element']['#theme'][0];
   }
@@ -18,9 +18,22 @@ function formcustomtemplate_theme_suggestions_alter(array &$suggestions, array $
     // Will use the form ID as a template suggestion:
     $suggestions[] = 'form_element__' . $variables['element']['#name'];
   }
+*/
+}
 
+/**
+ * Implements hook_theme().
+ */
+function formcustomtemplate_theme() {
+  return array(
+    'form__my_form_test' => array(
+      'render element' => 'form',
+      'template' => 'form--my-form-test',
+      'base hook' => 'form',
+    ),
+  );
 }
 
 function formcustomtemplate_theme_registry_alter(&$theme_registry) {
-  //dump($theme_registry); die();
+ // dump($theme_registry); die();
 }
